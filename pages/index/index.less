@@ -1,0 +1,66 @@
+.swiper{
+    height: 100%;
+    swiper-item{
+        box-sizing: border-box;
+        .banner_img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    swiper-item:nth-child(2n){
+        border: 0px solid transparent;
+    }
+}
+
+.nav{
+    display: flex;
+    margin: 10px 0;
+    .imgbox{
+        flex: 1;
+        height: 200rpx;
+        image{
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.lc{
+    width: 100%;
+    .shop{
+        margin: 20px 0;
+        .tit_img{
+            width: 100%;
+            height: 26px;
+            image{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .img_lists{
+            display: flex;
+            .left{
+                width: 35%;
+                image{
+                    width: 100%;
+                }
+            }
+            .right{
+                width: 65%;
+                display: flex;
+                flex-wrap: wrap;
+                .box:nth-child(1){
+                    display: none;
+                }
+                .box{
+                    margin: 5rpx;
+                    width: 46%;
+                    image{
+                        width: 100%;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,29 @@
+<!--pages/search/search.wxml-->
+<!-- 搜索框 -->
+<view class="top_sear">
+    <view class="txts">
+        <van-search
+        background="#ccc"
+        value="{{ value }}"
+        placeholder="请输入搜索关键词"
+        input-align="center"
+        bind:change="gettxt"
+        shape="round"
+        clear-trigger="focus"
+    />
+    </view>
+      
+    <button class="search" bindtap="getdata">搜索</button>
+    
+  
+</view>
+  
+
+<view class="tits">
+    <block wx:for="{{data}}">
+        <view>
+            {{item.goods_name}}
+        </view>
+    </block>
+</view>
+  

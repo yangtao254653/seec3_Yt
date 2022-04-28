@@ -1,0 +1,53 @@
+<!-- 搜索框 -->
+<van-search
+  background="#070"
+  value="{{ value }}"
+  placeholder="请输入搜索关键词"
+  bind:click-input="fn"
+  input-align="center"
+/>
+
+<!-- 轮播图 -->
+<view class="swiper">
+    <swiper autoplay duration="500" circular class="swipers">
+        <block wx:for="{{banners}}" wx:key="this">
+        <swiper-item>
+            <image class="banner_img" src="{{item.image_src}}" bindtap="getDetail" data-item="{{item}}" />
+        </swiper-item>
+        </block>
+    </swiper>
+</view>
+
+<!-- 导航 -->
+<view class="nav">
+    <block wx:for="{{navs}}">
+        <view class="imgbox">
+            <image src="{{item.image_src}}"/>
+        </view>
+    </block>
+</view>
+
+<!-- 楼层 -->
+  <view class="lc">
+      <block wx:for="{{data}}">
+        <view class="shop">
+            <view class="tit_img">
+                <image src="{{item.floor_title.image_src}}"/>
+            </view>
+            <view class="img_lists">
+                <view class="left">
+                    <image src="{{item.product_list[0].image_src}}" />
+                      
+                </view>
+                <view class="right">
+                    <block wx:for="{{item.product_list}}">
+                        <view class="box">
+                            <image src="{{item.image_src}}" />
+                        </view>
+                    </block>
+                </view>
+                  
+            </view>
+        </view>
+      </block>
+  </view>

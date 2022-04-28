@@ -1,0 +1,50 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/list/list",
+    "pages/cart/cart",
+    "pages/my/my",
+    "pages/search/search"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarBackgroundColor": "#070",
+  "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#f00",
+    "list": [
+        {
+            "pagePath": "pages/index/index",
+            "text": "首页",
+            "iconPath": "./image/home-off.png",
+            "selectedIconPath": "./image/home-on.png"
+        },
+        {
+            "pagePath": "pages/list/list",
+            "text": "分类",
+            "iconPath": "./image/fl-off.png",
+            "selectedIconPath": "./image/fl-on.png"
+        },
+        {
+            "pagePath": "pages/cart/cart",
+            "text": "购物车",
+            "iconPath": "./image/cart-off.png",
+            "selectedIconPath": "./image/cart-on.png"
+        },
+        {
+            "pagePath": "pages/my/my",
+            "text": "个人中心",
+            "iconPath": "./image/my-off.png",
+            "selectedIconPath": "./image/my-on.png"
+        }
+    ]
+},
+  "sitemapLocation": "sitemap.json",
+  "usingComponents": {
+    "van-search": "@vant/weapp/search/index",
+    "van-sidebar": "@vant/weapp/sidebar/index",
+    "van-sidebar-item": "@vant/weapp/sidebar-item/index"
+  }
+}

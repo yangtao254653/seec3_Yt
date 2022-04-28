@@ -1,0 +1,39 @@
+<!--pages/list/list.wxml-->
+<view class="main">
+    <view class="left">
+        <van-sidebar active-key="{{ activeKey }}">
+        <block wx:for="{{date}}" wx:key="index">
+            <van-sidebar-item title="{{item.cat_name}}" bind:click="getid" />
+        </block>
+        
+    </van-sidebar>
+    </view>
+
+    <view class="right">
+        <view class="box">
+            <block wx:for="{{dat}}">
+                <view class="title">
+                   / {{item.cat_name}} /
+                </view>
+                <view class="img_box">
+                    <block wx:for="{{item.children}}">
+                        <view class="image_box">
+                            <view class="img">
+                                <image src="{{item.cat_icon}}" />
+                            </view>
+                            <view class="title">
+                                {{item.cat_name}}
+                            </view>
+                        </view>
+                          
+                    </block>
+                      
+                </view>
+            </block>
+            
+        </view>
+    </view>
+</view>
+  
+  
+  
